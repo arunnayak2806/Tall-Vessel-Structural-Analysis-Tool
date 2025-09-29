@@ -1,6 +1,6 @@
 #include <iostream>
 #include <cmath>
-#include <algorithm> // For max()
+#include <algorithm> 
 
 using namespace std;
 
@@ -12,7 +12,7 @@ int main()
     // Input variables
     double ts, f, E, n, fbolt, sOD, Sh, SkH, DeP, CoA_mm, K1, weOfHead, Wins, ti_mm, Weiatt, wP, eWEld, DeOFSk, DeOFSh, b, l;
 
-    // Input prompt and reading values
+
     cout << "Enter tall vessel thickness (in m): ";
     cin >> ts;
 
@@ -127,7 +127,7 @@ int main()
 
     cout << "Used weight W (kN): " << W << endl;
 
-    // Calculate time factor (just kept from your code, check engineering reference for exact meaning)
+    // Calculate time factor
     double time = 6.35e-5 * pow(H / D, 1.5) * sqrt(W / ts);
 
     cout << "Time factor: " << time << endl;
@@ -220,7 +220,7 @@ int main()
         cout << "Required root area aR (m^2): " << aR << endl;
 
         // Diameter of bolt hole (assuming circular area)
-        double dia = sqrt((aR * (-1)) * 28 / 22); // Note: check if negative sign is intentional
+        double dia = sqrt((aR * (-1)) * 28 / 22); // check if negative sign is intentional
         cout << "Bolt hole diameter (mm): " << dia * 1000 << endl;
     }
     else
@@ -230,3 +230,4 @@ int main()
 
     return 0;
 }
+
